@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>
+    
+    
+    </title>
+    
+    
+    
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+
+.btn{
+width: 50px;
+height: 50px;
+margin: 5px;
+
+}
+
+
+.rd{
+ 
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  width:120px ;
+
+  
+}
+
+  
+
+</style>
+    
+    <script src="cal.js" ></script>
+</head>
+<body style="background-color: black;">
+    <form name="sci-calc" style= "text-align:center; margin:20% ; border: solid 1px orange ;"> 
+<div class="calculator">
+
+     <input id="display" name="display" value="0" size="28" maxlength="25" style ="background-color :#808080 ; color:white;"  >
+        </div>
+        
+        <div>
+<input type="button" class="btnTop rounded-circle btn" style ="background-color :#808080 ; color:white;" name="btnTop" value="AC" onclick="this.form.display.value= 0 ">
+<input type="button" class="btnMath rounded-circle btn" style ="background-color :#808080 ; color:white;" name="btnMath" value="Mod" onclick=" percent(this.form.display)">
+<input type="button" class="btnMath rounded-circle btn" style ="background-color :#808080 ; color:white;" name="btnMath" value="&#177" onclick="changeSign(this.form.display)">
+<input type="button" class="btnMath rounded-circle btn" style="background-color:orange; color : white ; " name="btnMath" value="/" onclick="addChar(this.form.display, '/')">
+    </div>
+    
+        <div>
+<input type="button" class="btnNum rounded-circle btn" style="background-color: #262626; color : white ; " name="btnNum" value="7" onclick="addChar(this.form.display, '7')">
+<input type="button" class="btnNum rounded-circle btn" style="background-color: #262626; color : white ; " name="btnNum" value="8" onclick="addChar(this.form.display, '8')">
+<input type="button" class="btnNum rounded-circle btn" style="background-color: #262626; color : white ; " name="btnNum" value="9" onclick="addChar(this.form.display, '9')">
+<input type="button" class="btnMath rounded-circle btn" style="background-color:orange; color : white ; " name="btnMath" value="*" onclick="addChar(this.form.display, '*')">
+    </div>
+
+
+        <div>
+<input type="button" class="btnNum rounded-circle btn" style="background-color: #262626; color : white ; "name="btnNum" value="4" onclick="addChar(this.form.display, '4')">
+<input type="button" class="btnNum rounded-circle btn" style="background-color: #262626; color : white ; " name="btnNum" value="5" onclick="addChar(this.form.display, '5')">
+<input type="button" class="btnNum rounded-circle btn" style="background-color: #262626; color : white ; " name="btnNum" value="6" onclick="addChar(this.form.display, '6')">
+<input type="button" class="btnMath rounded-circle btn" style="background-color:orange; color : white ; " name="btnMath" value="-" onclick="addChar(this.form.display, '-')">
+   </div>
+
+        <div>
+   <input type="button" class="btnNum rounded-circle btn" style="background-color: #262626; color : white ; " name="btnNum" value="1" onclick="addChar(this.form.display, '1')">
+   <input type="button" class="btnNum rounded-circle btn" style="background-color: #262626; color : white ; " name="btnNum" value="2" onclick="addChar(this.form.display, '2')">
+   <input type="button" class="btnNum rounded-circle btn" style="background-color: #262626; color : white ; " name="btnNum" value="3" onclick="addChar(this.form.display, '3')">
+   <input type="button" class="btnMath rounded-circle btn" style="background-color:orange; color : white ; " name="btnMath" value="+" onclick="addChar(this.form.display, '+')">
+        </div>
+
+   <div>
+   <input type="button" class="btnNum rd" style="background-color: #262626; color : white ; " name="btnNum" value="0" onclick="addChar(this.form.display, '0')">
+   <input type="button" class="btnMath rounded-circle btn " style="background-color: #262626; color : white ; " name="btnMath" value="&#46;" onclick="addChar(this.form.display, '&#46;')">
+   <input type="button" class="btnTop rounded-circle btn" style = "background-color:orange; color : white ; " name="btnTop" 
+          value="=" onclick="if(checkNum(this.form.display.value)) { compute(this.form) }">
+        </div>
+    </form>
+</body>
+</html>
